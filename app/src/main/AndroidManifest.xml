@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.goldenberg.lancadordebolinhaapp">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <application
         android:name=".Application.LancadorDeBolinha"
         android:allowBackup="true"
@@ -18,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Bluetooth.ConnectActivity"
+            android:theme="@android:style/Theme.Dialog"
+            android:label="@string/connect_activity"></activity>
     </application>
 
 </manifest>

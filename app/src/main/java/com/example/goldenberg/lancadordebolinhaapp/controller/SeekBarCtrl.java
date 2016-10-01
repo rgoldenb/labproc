@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.SeekBar;
 
+import com.example.goldenberg.lancadordebolinhaapp.MainActivity;
 import com.example.goldenberg.lancadordebolinhaapp.model.LancadorModel;
 import com.example.goldenberg.lancadordebolinhaapp.view.SettingsView;
 
@@ -28,9 +29,11 @@ public class SeekBarCtrl implements SeekBar.OnSeekBarChangeListener{
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
         if(seekBar == this.view.seekBarMotor1){
             Log.v("SeekBar: ", ((Integer) progress).toString());
+            ((MainActivity) view.getContext()).connectedThread.write(((Integer) progress).toString().getBytes());
         }
         else if(seekBar == this.view.seekBarMotor2){
             Log.v("SeekBar: ", ((Integer) progress).toString());
+            ((MainActivity) view.getContext()).connectedThread.write(((Integer) progress).toString().getBytes());
         }
     }
 

@@ -1,15 +1,15 @@
 package com.example.goldenberg.lancadordebolinhaapp.controller;
 
-import android.util.Log;
-import android.view.View;
+import android.widget.CompoundButton;
 
+import com.example.goldenberg.lancadordebolinhaapp.MainActivity;
 import com.example.goldenberg.lancadordebolinhaapp.model.LancadorModel;
 import com.example.goldenberg.lancadordebolinhaapp.view.SettingsView;
 
 /**
  * Created by Goldenberg on 27/09/16.
  */
-public class BtnController implements View.OnClickListener{
+public class BtnController implements CompoundButton.OnCheckedChangeListener{
     SettingsView view;
     LancadorModel model;
 
@@ -17,11 +17,17 @@ public class BtnController implements View.OnClickListener{
         this.view = view;
         this.model = model;
 
-        this.view.bluetooth_btn.setOnClickListener(this);
+        this.view.bluetooth_btn.setOnCheckedChangeListener(this);
     }
 
     @Override
-    public void onClick(View v) {
-        Log.v("Lancador de Bolinha", "Vamo liga esse Bluetooth");
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if(isChecked){
+            ((MainActivity) view.getContext()).connect();
+        }
+        else{
+            //Turn Bluetooth offs
+            ((MainActivity) view.getContext()).disconnect();
+        }
     }
 }

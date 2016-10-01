@@ -1,5 +1,6 @@
 package com.example.goldenberg.lancadordebolinhaapp.view;
 
+import android.content.Context;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.ToggleButton;
@@ -25,4 +26,5 @@ public class SettingsView {
         this.seekBarMotor2 = (SeekBar) view.findViewById(R.id.seekBar2);
     }
 
+    public Context getContext(){return view.getContext();}
 }

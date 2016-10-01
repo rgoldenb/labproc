@@ -62,5 +62,6 @@
     <string name="switch_motor_1">Motor 1</string>
     <string name="switch_motor_2">Motor 2</string>
     <string name="velocidade">Velocidade: </string>
+    <string name="connect_activity">Dispositivos Pareados: </string>
 
 </resources>
