@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
 
         public void write(byte[] bytes) {
             try {
-                Log.v("Enviando",bytes.toString());
+                //Log.v("Enviando",bytes.toString());
                 mmOutStream.write(bytes);
             } catch (IOException e) {
                 Log.getStackTraceString(e);

@@ -2,15 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:id="@+id/settings_view"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:background="#d14534">
 
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:id="@+id/imageView"
+        android:layout_gravity="right"
+        android:layout_weight="0"
+        android:src="@drawable/tenniscourt"/>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.04">
+        android:layout_weight="0.04"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
         <Switch
             android:layout_width="wrap_content"
@@ -39,7 +53,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.04" >
+        android:layout_weight="0.04"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
         <Switch
             android:layout_width="wrap_content"
@@ -64,8 +81,11 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1">
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -84,8 +104,10 @@
     <ToggleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Connect Bluetooth"
         android:id="@+id/toggleButton"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>

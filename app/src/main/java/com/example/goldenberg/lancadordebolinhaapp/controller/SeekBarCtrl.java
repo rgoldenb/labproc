@@ -28,12 +28,20 @@ public class SeekBarCtrl implements SeekBar.OnSeekBarChangeListener{
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
         if(seekBar == this.view.seekBarMotor1){
-            Log.v("SeekBar: ", ((Integer) progress).toString());
-            ((MainActivity) view.getContext()).connectedThread.write(((Integer) progress).toString().getBytes());
+            try {
+                //Log.v("SeekBar: ", ((Integer) progress).toString());
+                ((MainActivity) view.getContext()).connectedThread.write((((Integer) progress).toString() + "#").getBytes());
+            } catch (NullPointerException e) {
+                Log.getStackTraceString(e);
+            }
         }
         else if(seekBar == this.view.seekBarMotor2){
-            Log.v("SeekBar: ", ((Integer) progress).toString());
-            ((MainActivity) view.getContext()).connectedThread.write(((Integer) progress).toString().getBytes());
+            try {
+                //Log.v("SeekBar: ", ((Integer) progress).toString());
+                ((MainActivity) view.getContext()).connectedThread.write((((Integer) progress).toString() + "#").getBytes());
+            } catch (NullPointerException e) {
+                Log.getStackTraceString(e);
+            }
         }
     }
 

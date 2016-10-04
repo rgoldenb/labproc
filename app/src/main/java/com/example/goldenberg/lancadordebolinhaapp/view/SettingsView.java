@@ -2,6 +2,7 @@ package com.example.goldenberg.lancadordebolinhaapp.view;
 
 import android.content.Context;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.ToggleButton;
 
